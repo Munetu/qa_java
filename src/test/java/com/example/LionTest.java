@@ -22,7 +22,7 @@ public class LionTest {
         Lion lion = new Lion(sex, feline);
         boolean expectedValue = true;
         boolean actualValue = lion.doesHaveMane();
-        Assert.assertEquals("Boolean не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Boolean не соответствует ожидаемому.", expectedValue, actualValue);
     }
 
     @Test
@@ -31,7 +31,7 @@ public class LionTest {
         Lion lion = new Lion(sex, feline);
         boolean expectedValue = false;
         boolean actualValue = lion.doesHaveMane();
-        Assert.assertEquals("Boolean не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Boolean не соответствует ожидаемому.", expectedValue, actualValue);
     }
 
     @Test
@@ -41,7 +41,7 @@ public class LionTest {
         int expectedValue = 1;
         Mockito.when(feline.getKittens()).thenReturn(1);
         int actualValue = lion.getKittens();
-        Assert.assertEquals("Количество котят не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Количество котят не соответствует ожидаемому.", expectedValue, actualValue);
     }
 
     @Test
@@ -51,6 +51,6 @@ public class LionTest {
         List<String> expectedValue = List.of("Животные", "Птицы", "Рыба");
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> actualValue = lion.getFood();
-        Assert.assertEquals("Список еды не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Список еды не соответствует ожидаемому.", expectedValue, actualValue);
     }
 }

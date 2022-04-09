@@ -12,7 +12,7 @@ public class FelineTest {
         Feline feline = new Feline();
         List<String> expectedValue = List.of("Трава", "Различные растения");
         List<String> actualValue = feline.getFood("Травоядное");
-        Assert.assertEquals("Список еды не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Список еды не соответствует ожидаемому.", expectedValue, actualValue);
     }
 
     @Test
@@ -20,7 +20,7 @@ public class FelineTest {
         Feline feline = new Feline();
         List<String> expectedValue = List.of("Животные", "Птицы", "Рыба");
         List<String> actualValue = feline.getFood("Хищник");
-        Assert.assertEquals("Список еды не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Список еды не соответствует ожидаемому.", expectedValue, actualValue);
     }
 
     @Test
@@ -33,9 +33,9 @@ public class FelineTest {
         } catch (Exception ex) {
             exception = ex;
         }
-        Assert.assertNotNull("Ожидается ненулевое Исключение. Фактический результат: expection = null",exception);
+        Assert.assertNotNull("Ожидается ненулевое Исключение. Фактический результат: expection = null", exception);
         String actualValue = exception.getMessage();
-        Assert.assertEquals("Сообщение исключения не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Сообщение исключения не соответствует ожидаемому.", expectedValue, actualValue);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class FelineTest {
         List<String> expectedValue = List.of("Животные", "Птицы", "Рыба");
         //.when(feline.getFood("Хищник")).thenReturn(expectedValue);
         List<String> actualValue = feline.eatMeat();
-        Assert.assertEquals("Список еды не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Список еды не соответствует ожидаемому.", expectedValue, actualValue);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class FelineTest {
         Feline feline = new Feline();
         String expectedValue = "Кошачьи";
         String actualValue = feline.getFamily();
-        Assert.assertEquals("Семейство не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Семейство не соответствует ожидаемому.", expectedValue, actualValue);
     }
 
     @Test
@@ -60,9 +60,8 @@ public class FelineTest {
         Feline feline = new Feline();
         int expectedValue = 1;
         int actualValue = feline.getKittens();
-        Assert.assertEquals("Количество котят не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Количество котят не соответствует ожидаемому.", expectedValue, actualValue);
     }
-
 
 
 }

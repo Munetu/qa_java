@@ -16,11 +16,11 @@ public class CatTest {
     Feline feline;
 
     @Test
-    public void getSoundReturnCorrectString(){
+    public void getSoundReturnCorrectString() {
         Cat cat = new Cat(feline);
         String expectedValue = "Мяу";
         String actualValue = cat.getSound();
-        Assert.assertEquals("Звук не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Звук не соответствует ожидаемому.", expectedValue, actualValue);
     }
 
     @Test
@@ -29,6 +29,6 @@ public class CatTest {
         List<String> expectedValue = List.of("Животные", "Птицы", "Рыба");
         Mockito.when(feline.eatMeat()).thenReturn(expectedValue);
         List<String> actualValue = cat.getFood();
-        Assert.assertEquals("Список еды не соответствует ожидаемому.",expectedValue, actualValue);
+        Assert.assertEquals("Список еды не соответствует ожидаемому.", expectedValue, actualValue);
     }
 }
