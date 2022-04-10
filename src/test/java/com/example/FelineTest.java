@@ -28,12 +28,9 @@ public class FelineTest {
         Feline feline = new Feline();
         String expectedValue = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
         Exception exception = null;
-        try {
+        exception = Assert.assertThrows("Исключения не было сыграно, проверь тестируемый метод", Exception.class, () -> {
             feline.getFood("");
-        } catch (Exception ex) {
-            exception = ex;
-        }
-        Assert.assertNotNull("Ожидается ненулевое Исключение. Фактический результат: expection = null", exception);
+        });
         String actualValue = exception.getMessage();
         Assert.assertEquals("Сообщение исключения не соответствует ожидаемому.", expectedValue, actualValue);
     }
@@ -42,7 +39,6 @@ public class FelineTest {
     public void eatMeatReturnCorrectListString() throws Exception {
         Feline feline = new Feline();
         List<String> expectedValue = List.of("Животные", "Птицы", "Рыба");
-        //.when(feline.getFood("Хищник")).thenReturn(expectedValue);
         List<String> actualValue = feline.eatMeat();
         Assert.assertEquals("Список еды не соответствует ожидаемому.", expectedValue, actualValue);
     }
